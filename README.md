@@ -15,6 +15,14 @@ You can see the prototype on follow link:
 https://xd.adobe.com/view/f919aea9-a3dd-4c2e-5840-618befde7868-8f28/
 
 
+## What about technologies
+- the inteactive prototype was build using Adobe XD
+- FRONTEND: React (Native & JS)
+- BACKEND: NodeJS
+- DATABASE: MongoDB
+
+Another API using JAVA/SPRING will be created too.
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
