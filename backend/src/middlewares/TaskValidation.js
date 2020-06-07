@@ -8,16 +8,16 @@ const TaskValidation = async (req, res, next) => {
     if (!macaddress)
         return res.status(400).json({ error: 'macaddress must be not null' });
 
-    else if (!category)
+    if (!category)
         return res.status(400).json({ error: 'category must be not null' });
 
-    else if (!title)
+    if (!title)
         return res.status(400).json({ error: 'title must be not null' });
 
-    else if (!description)
+    if (!description)
         return res.status(400).json({ error: 'description must be not null' });
 
-    else if (!when || isPast(new Date(when)))
+    if (!when || isPast(new Date(when)))
         return res.status(400).json({ error: 'when must be not null and after now. ' });
 
 

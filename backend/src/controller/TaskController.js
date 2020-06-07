@@ -16,13 +16,21 @@ class TaskController {
             .catch(error => { res.status(422).json(error); })
     }
 
-    /*
     async findAll(req, res) {
-        await TaskModel.findAll()
+        await TaskModel.find({ 'macaddress': { '$in': req.body.macaddress } })
+            .sort('when')
+            .then(response => { res.status(200).json(response); })
+            .catch(error => { res.status(422).json(error); })
+    }
+
+    /*
+    async findById(req, res) {
+        await TaskModel.findById()
             .then(response => { res.status(200).json(response); })
             .catch(error => { res.status(422).json(error); })
     }
     */
+
 }
 
 
