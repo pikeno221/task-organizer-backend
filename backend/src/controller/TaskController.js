@@ -23,13 +23,14 @@ class TaskController {
             .catch(error => { res.status(422).json(error); })
     }
 
-    /*
+
     async findById(req, res) {
-        await TaskModel.findById()
+        await TaskModel.findById(req.params.id)
             .then(response => { res.status(200).json(response); })
             .catch(error => { res.status(422).json(error); })
     }
-    */
+
+
 
 }
 
