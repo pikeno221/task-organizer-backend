@@ -9,6 +9,8 @@ router.post('/', TaskValidation, TaskController.create);
 router.put('/:id', TaskController.update);
 router.get('/', MacAddressValidation, TaskController.findAll);
 router.get('/:id', TaskController.findById);
+router.delete('/:id', TaskController.delete);
+router.put('/status/:id', TaskController.updateStatus);
 
 
 module.exports = router;
