@@ -1,4 +1,4 @@
-# Task Organizer
+# Task Organizer Backend
 
 This application let user create and organize their tasks. 
 
@@ -16,12 +16,18 @@ https://xd.adobe.com/view/f919aea9-a3dd-4c2e-5840-618befde7868-8f28/
 
 
 ## What about technologies
-- the inteactive prototype was build using Adobe XD
-- FRONTEND: React (Native & JS)
-- BACKEND: NodeJS
-- DATABASE: MongoDB
-
+- Builded using node.js
 Another API using JAVA/SPRING will be created too.
+
+## How To Run
+
+```shell
+npm install
+```
+
+```shell
+npm start
+```
 
 
 ## Contributing
