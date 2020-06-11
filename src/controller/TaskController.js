@@ -3,6 +3,7 @@ const { startOfDay, endOfDay, startOfWeek, endOfWeek, startOfMonth, endOfMonth, 
 const current = new Date();
 
 class TaskController {
+    
 
     async create(req, res) {
         const task = new TaskModel(req.body);
@@ -18,7 +19,7 @@ class TaskController {
     }
 
     async findAll(req, res) {
-        await TaskModel.find({ 'macaddress': { '$in': req.body.macaddress } })
+        await TaskModel.find({ 'macaddress': { '$in': req.header('macaddress') } })
             .sort('when')
             .then(response => { return res.status(200).json(response); })
             .catch(error => { return res.status(422).json(error); });
@@ -89,7 +90,7 @@ class TaskController {
     async findYear(req, res) {
         await TaskModel.find({
             'when': { '$gte': startOfYear(current), '$lte': endOfYear(current) },
-            'macaddress': { '$in': req.body.macaddress }
+            'macaddress': { '$in': req.header('macaddress') }
         })
             .sort('when')
             .then(response => { return res.status(200).json(response); })

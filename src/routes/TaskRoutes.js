@@ -10,7 +10,7 @@ router.get('/week', MacAddressValidation, TaskController.findWeek);
 router.get('/month', MacAddressValidation, TaskController.findMonth);
 router.get('/year', MacAddressValidation, TaskController.findMonth);
 router.get('/overdue', MacAddressValidation, TaskController.findOverdue);
-router.get('/', MacAddressValidation, TaskController.findAll);
+router.get('/all', MacAddressValidation, TaskController.findAll);
 router.get('/:id', TaskController.findById);
 
 router.post('/', TaskValidation, TaskController.create);
