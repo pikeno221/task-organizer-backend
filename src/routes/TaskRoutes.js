@@ -8,7 +8,7 @@ const MacAddressValidation = require('../middlewares/MacAddressValidation');
 router.get('/today', MacAddressValidation, TaskController.findToday);
 router.get('/week', MacAddressValidation, TaskController.findWeek);
 router.get('/month', MacAddressValidation, TaskController.findMonth);
-router.get('/year', MacAddressValidation, TaskController.findMonth);
+router.get('/year', MacAddressValidation, TaskController.findYear);
 router.get('/overdue', MacAddressValidation, TaskController.findOverdue);
 router.get('/all', MacAddressValidation, TaskController.findAll);
 router.get('/:id', TaskController.findById);
